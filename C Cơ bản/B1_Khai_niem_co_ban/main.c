@@ -9,5 +9,7 @@ int main() {
     printf("\nPI = %f", PI);
     printf("\nCong 2 va 3 = %d", CONG(2, 3));
     printf("\n");
+    int x = 100;
+    printf("Gia tri cua x = %d", x);
     return 0;
 }
