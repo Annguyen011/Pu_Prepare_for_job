@@ -29,6 +29,20 @@ void bai3()
     x ^= (1 << bit_position);
 }
 
+void bai4()
+{
+    // kiem tra 1 bit o vi tri bat ki co bang 1 hay khong
+    int bit_position;
+    scanf("%d", &bit_position);
+    int bit_value = (x >> bit_position) & 1;
+    printf("Gia tri cua bit o vi tri %d la: %d\n", bit_position, bit_value);
+}
+
+void bai5()
+{
+    // in gia tri cua x sau khi thuc hien cac phep toan tren
+    printf("Gia tri cua x sau khi thuc hien cac phep toan: %hhu\n", x);
+}
 int	main(int argc, char **argv)
 {
     bai1();
