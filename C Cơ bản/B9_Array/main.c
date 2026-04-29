@@ -3,6 +3,7 @@
 void nhap_mang(int a[], int n);
 void in_mang(int a[], int n);
 void them_phan_tu(int a[], int *n, int vt, int x);
+void xoa_phan_tu(int a[], int *n, int vt);
 int	main(int argc, char **argv)
 {
     int arr[5] = {1, 2, 3, 4, 5};
@@ -40,4 +41,12 @@ void them_phan_tu(int a[], int *n, int vt, int x)
     }
     a[vt] = x;
     (*n)++;
+}
+
+void xoa_phan_tu(int a[], int *n, int vt)
+{
+    for(int i = vt; i < *n - 1; i++) {
+        a[i] = a[i + 1];
+    }
+    (*n)--;
 }
