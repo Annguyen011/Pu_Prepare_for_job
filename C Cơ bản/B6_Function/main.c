@@ -6,6 +6,7 @@ void nhap_thong_tin_ca_nhan(void);
 
 int main()
 {
+    nhap_thong_tin_ca_nhan();
 
     return 0;
 }
