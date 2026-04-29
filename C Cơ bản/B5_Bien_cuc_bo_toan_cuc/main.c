@@ -1,14 +1,18 @@
 ﻿#include<stdio.h>
 
-int cong2so(int a, int b)
+// static khi thoat khoi ham thi bien cuc bo khong bi thu hoi vung nho, gia tri van duoc luu lai
+void tangbien()
 {
-    return a + b;
+    static int x = 0; // bien cuc bo, chi duoc khoi tao 1 lan duy nhat
+    x++;
+    printf("Gia tri cua x = %d\n", x);
 }
+
+// static khi su dung bien va ham toan cuc chi duoc su dung trong file do, khong the su dung o file khac
+static int y = 0; // bien toan cuc, chi su dung trong file nay
 
 int	main(int argc, char **argv)
 {
-    int kq = cong2so(2, 3);
-    printf("Ket qua cong 2 va 3 = %d", kq);
 
 
     return 0;
