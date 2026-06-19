@@ -13,6 +13,6 @@ int main(int argc, char const *argv[])
     int str_cmp = strcmp(ten1, ten2);
     printf("Ket qua so sanh do dai: %d\n", strcmp);
 
-
+    
 
 }
