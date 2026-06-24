@@ -4,6 +4,28 @@
 
 using namespace std;
 
+void bai_1()
+{
+    set<string> s;
+    string str;
+    while(cin >> str)
+    {
+        s.insert(str);
+    }
+
+    // while(getline(cin, str))
+    // {
+    //     if(s.count(str) > 0)
+    //     {
+    //         cout << "Tim thay " << str << endl;
+    //     }
+    //     else
+    //     {
+    //         cout << "Khong tim thay " << str << endl;
+    //     }
+    // }
+}
+
 int main()
 {
     vector<int> v = {1, 2, 3, 4, 5, 6, 7};
