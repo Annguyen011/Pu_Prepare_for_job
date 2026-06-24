@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector> // Chỉ cần thư viện này là đủ dùng vector rồi
+#include<set>
 
 using namespace std;
 
@@ -18,6 +19,10 @@ int main()
     // {
     //     cout << *it << " "; // In ra giá trị mà con trỏ iterator đang trỏ tới
     // }
+    set<int> s = {1, 2, 3, 4, 5, 6, 7};
+    cout << *s.begin() << endl; // In ra giá trị của phần tử đầu
+    cout << *s.rbegin() << endl; // In ra giá trị của phần tử
+
     
     return 0;
 }
