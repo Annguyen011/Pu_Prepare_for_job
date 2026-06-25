@@ -70,7 +70,6 @@ void vi_du_sort_1()
 //     {
 //         cout << "Khong tim thay" << endl;
 //     }
-
 //     sort(a, a + n);
 //     auto p = binary_search(a, a + n, 4);
 //     if(p)
@@ -85,8 +84,6 @@ void vi_du_sort_1()
 // void bai_tap_2()
 // {
 // }
-
-#pragma endregion
 
 int main(int argc, char const *argv[])
 {
