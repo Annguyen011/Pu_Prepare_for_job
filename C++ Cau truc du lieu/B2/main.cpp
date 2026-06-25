@@ -19,6 +19,8 @@ void vi_du_sort_1()
     // 16 
 }
 #pragma binary search
+
+#pragma region 1
 // void bai_tap()
 // {
 //     int a[10] = {1, 2, 3, 4, 5, 4, 9, 7};
@@ -54,6 +56,7 @@ void vi_du_sort_1()
 //         return dem(a) > dem(b);
 //     return a < b;
 // }
+
 // void bai_tap_2()
 // {
 //     int a[10] = {1, 2, 3, 4, 5, 4, 9, 7};
@@ -79,11 +82,10 @@ void vi_du_sort_1()
 //         cout << "Khong tim thay" << endl;
 //     }
 // }
-
 // void bai_tap_2()
 // {
-
 // }
+
 #pragma endregion
 
 int main(int argc, char const *argv[])
