@@ -56,6 +56,27 @@ void vi_du_sort_1()
 // }
 #pragma endregion
 
+#pragma search
+
+void bai_tap_2()
+{
+    int a[10] = {1, 2, 3, 4, 5, 4, 9, 7};
+    int n = 8;
+    int *x = find(a, a + n, 4);
+    if(x != a + n)
+    {
+        cout << "Tim thay tai vi tri: " << x - a << endl;
+    }
+    else
+    {
+        cout << "Khong tim thay" << endl;
+    }
+
+    
+}
+
+#pragma endregion
+
 int main(int argc, char const *argv[])
 {
     
