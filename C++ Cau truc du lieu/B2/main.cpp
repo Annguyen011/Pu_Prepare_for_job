@@ -85,7 +85,7 @@ void vi_du_sort_1()
 // {
 // }
 
-    #pragma region 
+    #pragma region Bai tap
 void bai_tap()
 {
     int a[10] = {1, 2, 3, 4, 5, 4, 9, 7};
@@ -93,7 +93,11 @@ void bai_tap()
 
     auto it = lower_bound(a, a + n, 7);
     cout << "Vi tri cua phan tu dau tien >= 7: " << it - a << endl;
+
+    auto it2 = upper_bound(a, a + n, 7);
+    cout << "Vi tri cua phan tu dau tien > 7: " << it2 - a << endl;
 }
+    #pragma endregion
 
 int main(int argc, char const *argv[])
 {
