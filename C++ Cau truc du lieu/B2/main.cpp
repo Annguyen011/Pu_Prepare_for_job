@@ -16,9 +16,13 @@ void vi_du_sort_1()
     cout << c << endl;
     sort(c, c + 5);
     cout << c << endl;
+    // 16 
 }
 
-
+void binarySearch()
+{
+    
+}
 
 int main(int argc, char const *argv[])
 {
