@@ -18,11 +18,27 @@ void vi_du_sort_1()
     cout << c << endl;
     // 16 
 }
-
+// Binary Search    
 void binarySearch()
 {
-    
+
 }
+
+int dem(int n)
+{
+    if(n == 0)
+        return 0;
+    int ans = 0;
+    while(n != 0)
+    {
+        int r = n % 10;
+        if(r == 0 || r == 6 || r == 8)
+        ans++;
+        n /= 10;
+    }
+    return ans;
+}
+
 
 int main(int argc, char const *argv[])
 {
