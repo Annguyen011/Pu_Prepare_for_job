@@ -19,14 +19,14 @@ void vi_du_sort_1()
     // 16 
 }
 #pragma binary search
-void bai_tap()
-{
-    int a[10] = {1, 2, 3, 4, 5, 4, 9, 7};
-    int n = 0;
-    stable_sort(a, a + n, [](int x, int y)-> bool{
-        return x < y;
-    });
-}
+// void bai_tap()
+// {
+//     int a[10] = {1, 2, 3, 4, 5, 4, 9, 7};
+//     int n = 0;
+//     stable_sort(a, a + n, [](int x, int y)-> bool{
+//         return x < y;
+//     });
+// }
 // // Binary Search    
 // void binarySearch()
 // {
