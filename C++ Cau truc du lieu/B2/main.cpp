@@ -85,6 +85,16 @@ void vi_du_sort_1()
 // {
 // }
 
+    #pragma region 
+void bai_tap()
+{
+    int a[10] = {1, 2, 3, 4, 5, 4, 9, 7};
+    int n = 8;
+
+    auto it = lower_bound(a, a + n, 7);
+    cout << "Vi tri cua phan tu dau tien >= 7: " << it - a << endl;
+}
+
 int main(int argc, char const *argv[])
 {
     return 0;
