@@ -54,36 +54,36 @@ void vi_du_sort_1()
 //         return dem(a) > dem(b);
 //     return a < b;
 // }
-#pragma endregion
+// void bai_tap_2()
+// {
+//     int a[10] = {1, 2, 3, 4, 5, 4, 9, 7};
+//     int n = 8;
+//     int *x = find(a, a + n, 4);
+//     if(x != a + n)
+//     {
+//         cout << "Tim thay tai vi tri: " << x - a << endl;
+//     }
+//     else
+//     {
+//         cout << "Khong tim thay" << endl;
+//     }
 
-#pragma search
+//     sort(a, a + n);
+//     auto p = binary_search(a, a + n, 4);
+//     if(p)
+//     {
+//         cout << "Tim thay" << p << endl;
+//     }
+//     else
+//     {
+//         cout << "Khong tim thay" << endl;
+//     }
+// }
 
-void bai_tap_2()
-{
-    int a[10] = {1, 2, 3, 4, 5, 4, 9, 7};
-    int n = 8;
-    int *x = find(a, a + n, 4);
-    if(x != a + n)
-    {
-        cout << "Tim thay tai vi tri: " << x - a << endl;
-    }
-    else
-    {
-        cout << "Khong tim thay" << endl;
-    }
+// void bai_tap_2()
+// {
 
-    sort(a, a + n);
-    auto p = binary_search(a, a + n, 4);
-    if(p)
-    {
-        cout << "Tim thay" << p << endl;
-    }
-    else
-    {
-        cout << "Khong tim thay" << endl;
-    }
-}
-
+// }
 #pragma endregion
 
 int main(int argc, char const *argv[])
