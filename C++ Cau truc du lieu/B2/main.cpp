@@ -72,13 +72,22 @@ void bai_tap_2()
         cout << "Khong tim thay" << endl;
     }
 
-    
+    sort(a, a + n);
+    auto p = binary_search(a, a + n, 4);
+    if(p)
+    {
+        cout << "Tim thay" << p << endl;
+    }
+    else
+    {
+        cout << "Khong tim thay" << endl;
+    }
 }
 
 #pragma endregion
 
 int main(int argc, char const *argv[])
 {
-    
+    bai_tap_2();
     return 0;
 }
