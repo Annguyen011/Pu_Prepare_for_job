@@ -88,6 +88,5 @@ void bai_tap_2()
 
 int main(int argc, char const *argv[])
 {
-    bai_tap_2();
     return 0;
 }
