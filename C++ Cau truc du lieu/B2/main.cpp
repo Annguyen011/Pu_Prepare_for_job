@@ -39,6 +39,12 @@ int dem(int n)
     return ans;
 }
 
+bool cmp(int a, int b)
+{
+    if(dem(a) != dem(b))
+        return dem(a) > dem(b);
+    return a < b;
+}
 
 int main(int argc, char const *argv[])
 {
