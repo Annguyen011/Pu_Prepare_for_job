@@ -22,9 +22,9 @@ void co_ban_struct() {
         int tuoi;
         char que_quan[50];
         float diem_trung_binh;
-    } SinhVienTypedef;
+    } SinhVien_t;
 
-    SinhVienTypedef sv2;
+    SinhVien_t sv2;
     printf("Nhập tên sinh viên: ");
     fgets(sv2.ten, sizeof(sv2.ten), stdin);
     printf("Nhap tuổi sinh viên: ");
