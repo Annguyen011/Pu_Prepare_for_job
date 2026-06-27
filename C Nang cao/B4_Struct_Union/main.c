@@ -1,13 +1,41 @@
 #include<stdio.h>
 
+typedef struct {
+    char ten[50];
+    int tuoi;
+    char que_quan[50];
+    float diem_trung_binh;
+} SinhVien_t;
+
 void con_tro_hang_va_hang_con_tro();
 void co_ban_struct();
+void nhap_thong_tin_sinh_vien(SinhVien_t *sv);
+void in_thong_tin_sinh_vien(SinhVien_t *sv);
 
 int main() {
 
     return 0;
 }
 
+void nhap_thong_tin_sinh_vien(SinhVien_t *sv) {
+    printf("Nhập tên sinh viên: ");
+    fgets(sv->ten, sizeof(sv->ten), stdin);
+    printf("Nhap tuổi sinh viên: ");
+    scanf("%d", &sv->tuoi);
+    printf("Nhap quê quán sinh viên: ");
+    fflush(stdin); // Xóa bộ đệm đầu vào trước khi đọc chuỗi
+    fgets(sv->que_quan, sizeof(sv->que_quan), stdin);
+    printf("Nhap điểm trung bình sinh viên: ");
+    scanf("%f", &sv->diem_trung_binh);
+
+}
+
+void in_thong_tin_sinh_vien(SinhVien_t *sv) {
+    printf("Tên: %s\n", sv->ten);
+    printf("Tuổi: %d\n", sv->tuoi);
+    printf("Quê quán: %s\n", sv->que_quan);
+    printf("Điểm trung bình: %.2f\n", sv->diem_trung_binh);
+}
 
 void co_ban_struct() {
     // Khai báo một struct
@@ -43,7 +71,6 @@ void co_ban_struct() {
     printf("Tuổi: %d\n", sv1.tuoi);
     printf("Điểm trung bình: %.2f\n", sv1.diem_trung_binh);
 }
-
 
 void con_tro_hang_va_hang_con_tro() {
     // // Khai báo một hằng số
