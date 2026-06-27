@@ -13,21 +13,35 @@ void nhap_thong_tin_sinh_vien(SinhVien_t *sv);
 void in_thong_tin_sinh_vien(SinhVien_t *sv);
 
 int main() {
+    SinhVien_t sv;
 
     return 0;
 }
 
 void nhap_thong_tin_sinh_vien(SinhVien_t *sv) {
+    // 1. Nhập Tên
     printf("Nhập tên sinh viên: ");
+    fflush(stdout); // Ép máy tính in câu nhắc ra màn hình ngay lập tức
     fgets(sv->ten, sizeof(sv->ten), stdin);
-    printf("Nhap tuổi sinh viên: ");
-    scanf("%d", &sv->tuoi);
-    printf("Nhap quê quán sinh viên: ");
-    fflush(stdin); // Xóa bộ đệm đầu vào trước khi đọc chuỗi
-    fgets(sv->que_quan, sizeof(sv->que_quan), stdin);
-    printf("Nhap điểm trung bình sinh viên: ");
-    scanf("%f", &sv->diem_trung_binh);
 
+    // 2. Nhập Tuổi
+    printf("Nhap tuổi sinh viên: ");
+    fflush(stdout);
+    scanf("%d", &sv->tuoi);
+
+    // BƯỚC QUAN TRỌNG: Dọn rác (dấu Enter) kẹt lại sau lệnh scanf
+    // (Dùng cái này thay cho fflush(stdin) để chạy tốt trên mọi hệ điều hành)
+    while(getchar() != '\n'); 
+
+    // 3. Nhập Quê quán
+    printf("Nhap quê quán sinh viên: ");
+    fflush(stdout);
+    fgets(sv->que_quan, sizeof(sv->que_quan), stdin);
+
+    // 4. Nhập Điểm
+    printf("Nhap điểm trung bình sinh viên: ");
+    fflush(stdout);
+    scanf("%f", &sv->diem_trung_binh);
 }
 
 void in_thong_tin_sinh_vien(SinhVien_t *sv) {
