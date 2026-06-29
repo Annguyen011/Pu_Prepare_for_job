@@ -13,7 +13,7 @@ void bai_tap_1()
 
 int main()
 {
-
+    printf("Bai tap 1:\n");
 
     return 0;
 }
