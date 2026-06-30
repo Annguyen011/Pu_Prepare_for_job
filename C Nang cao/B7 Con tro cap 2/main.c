@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 void bai_tap_1()
 {
@@ -21,12 +22,11 @@ void bai_tap_2()
         scanf("%d", ptr[i]);
     }
 
-    for
+    
 }
 
 int main()
 {
-    printf("Bai tap 1:\n");
 
     return 0;
 }
