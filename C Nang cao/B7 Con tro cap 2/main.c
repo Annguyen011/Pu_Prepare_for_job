@@ -11,6 +11,19 @@ void bai_tap_1()
     
 }
 
+void bai_tap_2()
+{
+    int *ptr[3];
+    
+    for (int i = 0; i < 3; i++)
+    {
+        ptr[i] = (int *)malloc(sizeof(int));
+        scanf("%d", ptr[i]);
+    }
+
+    for
+}
+
 int main()
 {
     printf("Bai tap 1:\n");
