@@ -42,8 +42,11 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint32_t time_current;
-uint8_t sta_button;
+uint8_t btn_current;
+uint8_t btn_last;
+uint8_t btn_fillter = 1;
+uint8_t is_debouncing;
+uint32_t time_debounce;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -55,7 +58,22 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void button_handle()
+{
+  uint32_t sta = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
+  if(sta != btn_fillter)
+  {
+    btn_fillter = sta;
+    is_debouncing = 1;
+    time_debounce = HAL_GetTick();
+  }
 
+  if(is_debouncing && HAL_GetTick() - time_debounce >= 50) // 50ms debounce time
+  {
+    btn_current = btn_fillter;
+    is_debouncing = 0;
+  }
+}
 /* USER CODE END 0 */
 
 /**
@@ -104,7 +122,7 @@ int main(void)
     // }
     // // push pull
     // // open drain
-    sta_button = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
+    // sta_button = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
     // if (sta_button == GPIO_PIN_RESET)
     // {
     //   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
@@ -117,12 +135,12 @@ int main(void)
     //   // Button is not pressed
     //   // led off
     // }
-    if (sta_button == GPIO_PIN_RESET)
-    {
-      HAL_Delay(100); // Debounce delay
-      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-      while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_RESET);
-    }
+    // if (sta_button == GPIO_PIN_RESET)
+    // {
+    //   HAL_Delay(100); // Debounce delay
+    //   HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+    //   while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_RESET);
+    // }
     
   }
   /* USER CODE END 3 */
