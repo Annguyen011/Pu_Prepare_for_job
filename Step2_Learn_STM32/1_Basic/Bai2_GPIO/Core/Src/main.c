@@ -74,6 +74,56 @@ void button_handle()
     is_debouncing = 0;
   }
 }
+
+typedef enum
+{
+  LED_OFF,
+  LED1_BLINK_1HZ,
+  LED2_BLINK_5HZ,
+}led_status_e;
+
+ledstatus_e led_status;
+
+void led1blink()
+{
+  static uint32_t led1_blink = 0;
+  if(HAL_Gettick() - led1_blink >= 500)
+  {
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+    led1_blink = HAL_Gettick();
+  }  
+}
+
+void led2blink()
+{
+  static uint32_t led1_blink = 0;
+  if(HAL_Gettick() - led1_blink >= 100)
+  {
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_14);
+    led1_blink = HAL_Gettick();
+  }  
+}
+void led_handle()
+{
+  switch(led_status)
+  {
+    case LED_OFF:
+    led_status = LED1_BLINK_1HZ;
+    HAL_GPIO_writePin(GPOIC, GPIO_PIN_13, 1);
+    HAL_GPIO_writePin(GPOIC, GPIO_PIN_14, 0);
+      break;
+    case LED1_BLINK_1HZ:
+    led1blink();
+    led_status = LED2_BLINK_1HZ;
+      break;
+    case LED2_BLINK_5HZ:
+    led2blink();
+    led_status = LED_OFF;
+      break;
+  }
+}
+
+
 /* USER CODE END 0 */
 
 /**
