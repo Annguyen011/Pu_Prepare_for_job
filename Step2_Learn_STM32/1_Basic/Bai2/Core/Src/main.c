@@ -96,7 +96,11 @@ int main(void)
   {
     /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
-    time_current = HAL_GetTick();
+    if(HAL_GetTick() - time_current >= 1000)
+    {
+      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+      time_current = HAL_GetTick();
+    }
   }
   /* USER CODE END 3 */
 }
