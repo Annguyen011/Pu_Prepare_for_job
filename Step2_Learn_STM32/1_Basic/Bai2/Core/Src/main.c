@@ -105,18 +105,25 @@ int main(void)
     // // push pull
     // // open drain
     sta_button = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
+    // if (sta_button == GPIO_PIN_RESET)
+    // {
+    //   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+    //   // Button is pressed
+    //   // led on
+    // }
+    // else
+    // {
+    //   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
+    //   // Button is not pressed
+    //   // led off
+    // }
     if (sta_button == GPIO_PIN_RESET)
     {
-      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
-      // Button is pressed
-      // led on
+      HAL_Delay(100); // Debounce delay
+      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+      while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_RESET);
     }
-    else
-    {
-      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
-      // Button is not pressed
-      // led off
-    }
+    
   }
   /* USER CODE END 3 */
 }
