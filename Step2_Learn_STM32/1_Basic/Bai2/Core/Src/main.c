@@ -101,6 +101,9 @@ int main(void)
       HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
       time_current = HAL_GetTick();
     }
+    // push pull
+    // open drain
+    
   }
   /* USER CODE END 3 */
 }
