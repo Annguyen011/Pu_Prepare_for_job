@@ -43,6 +43,7 @@
 
 /* USER CODE BEGIN PV */
 uint32_t time_current;
+uint8_t sta_button;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -103,7 +104,7 @@ int main(void)
     // }
     // // push pull
     // // open drain
-    
+    sta_button = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
   }
   /* USER CODE END 3 */
 }
